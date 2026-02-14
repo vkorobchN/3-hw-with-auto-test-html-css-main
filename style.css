@@ -5,7 +5,7 @@
 }
 
 .container {
-    outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+    /* outline: 1px solid red; чтобы контейнер был виден, в конце можно будет удалить это св-во */
     margin: 0 auto;
     width: 100%;
     max-width: 1140px;/* 📍 Максимальная ширина для контейнера */
@@ -34,6 +34,7 @@ header span {
     background-color: #fafaff;
     padding: 60px 0;
     min-height: 100vh;
+
     display: flex;/* 📍 Свойства flexbox для размещения container-a вертикально по центру */
     justify-content: center;
     align-items: center;
@@ -46,8 +47,7 @@ header span {
 
 .text-wrapper {
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
-    max-width: 1140px;
-    margin: 0 auto;
+    max-width: 425px;
 }
 
 .main-title {
@@ -71,7 +71,9 @@ header span {
 }
 
 .about-section .wrapper {
-    /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;/* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
 }
 
 select {
@@ -89,7 +91,8 @@ select {
 
 select:hover,
 .text-field:hover {
-    /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
+    border: 1px solid #4778e9;
+    cursor: pointer;/* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
 
@@ -104,6 +107,11 @@ select:hover,
     margin-bottom: 25px;
 }
 
+.skills,
+.books-list {
+    min-width: 50%;
+}
+
 .frameworks,
 .books {
     min-width: 50%;
@@ -111,7 +119,9 @@ select:hover,
 
 .frameworks-list,
 .books-list {
-    /* 📍 Свойства flexbox для отступов между элементами в списках */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;/* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
 .frameworks-list {
@@ -122,11 +132,15 @@ select:hover,
 }
 
 .skills-block {
-    /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;/* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
 }
 
 .skills {
-    min-width: 50%;/* 📍 Свойства flexbox для расположения элементов с классом .label */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;/* 📍 Свойства flexbox для расположения элементов с классом .label */
 }
 
 .books-list {
@@ -139,6 +153,10 @@ select:hover,
 .label {
     font-weight: 400;
     font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 form {
@@ -169,7 +187,8 @@ form {
 }
 
 .btn:hover {
-    /* 📍 Стили для кнопки при наведении курсора */
+    background-color: #2965F1;
+    cursor: pointer;/* 📍 Стили для кнопки при наведении курсора */
 }
 
 .line {
@@ -191,7 +210,7 @@ th, td {
 footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
-    /* 📍 Свойство для расположения ссылки горизонтально по центру */
+    text-align: center;/* 📍 Свойство для расположения ссылки горизонтально по центру */
 }
 
 .footer-link {
@@ -202,5 +221,5 @@ footer {
 }
 
 .footer-link:hover {
-    /* 📍 Стили для ссылки при наведении курсора */
+    text-decoration: underline;/* 📍 Стили для ссылки при наведении курсора */
 }
