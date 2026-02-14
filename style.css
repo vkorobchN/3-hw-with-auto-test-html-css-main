@@ -121,7 +121,7 @@ select:hover,
 .books-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;/* 📍 Свойства flexbox для отступов между элементами в списках */
+    gap: 16px;/* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
 .frameworks-list {
